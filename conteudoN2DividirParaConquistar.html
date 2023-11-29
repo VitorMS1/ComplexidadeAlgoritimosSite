@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header class="headerFixa">
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" onclick="removeHeaderFixa();" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div id="conteudoComFooter-id" class="conteudoComFooter">
+
+        <section class="conteudo containerDeSlides">
+            <div class="setas esquerda" onclick="esquerda();">
+                <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+            </div>
+            <div class="containerConteudo">
+                <ul class="listaDeItens" style="list-style: none;">
+                    
+                    <li class="itemLista">
+                        <div class="carousel-item black-text">
+                            <div class="div-paginas">
+                                <div class="div-paginas-titulo">
+                                    <h2>O que é Dividir para Conquistar?</h2>
+                                </div>
+                                <div class="div-paginas-conteudo">
+                                    <div class="div-paginas-conteudo-texto">
+                                        <p class="black-text">                
+                                            Na computação, o termo dividir para conquistar se refere a um certo paradigma de algoritimo. Ele utiliza 
+                                            fundamentalmente do conceito de recursisvidade, isto é, a capacidade de uma função ou método de invocar 
+                                            a si mesmo na sua própria execução. Este recurso permite que este paradigma possa executar a sua tática, 
+                                            que consiste em, dividir recursivamente um grande problema em subproblemas menores, até que finalmente esse 
+                                            problema seja pequeno o suficiente para que possar ser resolvido, e então, todos esses resultados são 
+                                            combinados para formar a solução final. 
+                                        </p>
+                                    </div>
+                                    <div class="div-paginas-conteudo-img">
+                                        <img src="assets/img/dividirConquistar_img03.png" width="100%" height="100%" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Explicando o paradigma</h2>
+                                <p class="black-text">                
+                                    Entrando um pouco mais a fundo para explicar melhor o funcionamento desse paradigma, podemos observar que a
+                                    sua execução se dá através de 3 passos.<br>
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <ul id="ul-passos-dividirConquistar">
+                                        <li><strong>1</strong>- Dividir o grande problema em partes (subproblemas) menores sucessivamente, até que possam ser resolvidos</li>
+                                        <li><strong>2</strong>- Conquistar / Resolver recursivsamente todos esse problemas menores formados</li>
+                                        <li><strong>3</strong>- Combinar o resultado de todos os subproblemas em uma solução final para problema inicial</li>
+                                    </ul>
+                                    <p class="black-text">
+                                        De forma geral, o paradigma cria pelo menos dois subproblemas fazendo múltiplas chamadas recursivas, 
+                                        esse recurso facilita a resolução de problemas difíceis, pois a complexidade é simplificada ao lidar 
+                                        com partes menores e mais específicas da questão. Isto trás uma maior eficiencia na execução do código,
+                                        principalmente quando falamos de arquiteturas multithreading.
+                                    </p>
+                                    <p class="black-text">
+                                       Quanto a complexidade dessa técnica, partindo de uma entrada de dados <strong>n</strong>, o processo de
+                                       divisão terá uma complexidade de <strong>O(log(n))</strong>, pois se trata de uma divisão consecutiva do
+                                       problema exatamente ao meio. Já o processo combinatorio será representado por <strong>O(n)</strong>. Logo,
+                                       a complexidade desse paradigma pode ser definida nomo <strong>O(n log(n))</strong>.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/dividirConquistar_img01.png" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo</h2>
+                                <p class="black-text" style="margin-bottom: 0;">                   
+                                    Por fim, para demonstrar uma aplicação do método, temos um algoritimo de <strong>mergeSort</strong>. 
+                                    Esse algoritimo busca realizar a ordenação de um array por comparação dos seus elementos, para isso, 
+                                    utilizando do paradigma dividir para conquistar. 
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">       
+                                        Seguindo esses conceitos, a execução do algoritimo irá se iniciar com a divisão da entrada 
+                                        inicial (no caso o array de números), ela será dividida ao meio consecutivamente até que se 
+                                        resuma em apenas dois elementos individuais. Então, passamos para o segundo passo, onde esses
+                                        elementos serão relacionados por meio de uma comparação simples como A ≤ B, que será executada 
+                                        recursivamente. Por fim, no úlitmo passo esses elementos serão novamente combinados, de forma 
+                                        organizada seguindo os resultados das comparações realizadas entre os elementos. 
+                                    </p>
+         
+                                    <div class="col s12 m3" style="width: 100%; margin-top: 1rem;">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                 <span class="card-title activator grey-text text-darken-4">Exemplo pseudocódigo</span>
+                                            </div>
+                                            <div class="card-reveal">
+                                                <p>
+                                                     função mergesort (vetor números) <br>
+                                                         se ( >= 1)<br>
+                                                             retornar numeros<br><br>
+                                             
+                                                         //dividindo Lista<br>
+                                                         vetor lista1 = numeros[0] ... a[n/2]<br>
+                                                         vetor lista2 = numeros[n/2 + 1] ... a[n]<br><br>
+                                             
+                                                         //Chamando recursivamente para dividir<br>
+                                                         lista1 = mergesort(lista1)<br>
+                                                         lista2 = mergesort(lista2)<br><br>
+                                             
+                                                         retornar combinar(lista1, lista2)<br>
+                                                     fim da função mergesort<br><br>
+                                         
+                                                     função combinar (vetor lista1, lista2)<br>
+                                                         vetor listaCombinada<br><br>
+                                                 
+                                                         enquanto (lista1 e lista2 têm elementos)<br>
+                                                             se (lista1[0] >= lista2[0])<br>
+                                                                 inserir lista1[0] na listaCombinada <br>
+                                                                 remover lista1[0] de lista1<br>
+                                                             senão<br>
+                                                                 adicionar lista2[0] na listaCombinada <br>
+                                                                 remover lista2[0] de lista2<br><br>
+                                                         
+                                                             enquanto (lista1 tem elementos)<br>
+                                                                 adicionar lista1[0] na listaCombinada <br>
+                                                                 remover lista1[0] de listaCombinada<br>
+                                                             enquanto (lista2 tem elementos)<br>
+                                                                 adicionar lista2[0] na listaCombinada <br>
+                                                                 remover lista2[0] de lista2<br>
+                                                             retornar listaCombinada<br>
+                                                     fim da função mesclar<br>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/dividirConquistar_img02.png" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+            <div class="setas direita" onclick="direita();">
+                <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
+            </div>
+    
+        </section>
+        <footer class="page-footer">
+            <div class="page-footer-participantes">
+                <h5 class="white-text">Participantes</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright">
+                <p>
+                    © 2023 Copyright
+                </p>
+                </span>
+              </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    
+    function removeHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        let overlay = document.querySelector(".sidenav-overlay");
+
+        cabecalho.classList.remove("headerFixa");
+        conteudo.classList.remove("conteudoComFooter");
+
+        overlay.addEventListener("click", InsereHeaderFixa);
+    };
+
+    function InsereHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        cabecalho.classList.toggle("headerFixa");
+        conteudo.classList.toggle("conteudoComFooter");
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

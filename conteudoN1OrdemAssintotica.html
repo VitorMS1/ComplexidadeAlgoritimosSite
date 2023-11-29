@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header class="headerFixa">
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" onclick="removeHeaderFixa();" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div id="conteudoComFooter-id" class="conteudoComFooter">
+
+        <section class="conteudo containerDeSlides">
+            <div class="setas esquerda" onclick="esquerda();">
+                <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+            </div>
+            <div class="containerConteudo">
+                <ul class="listaDeItens" style="list-style: none;">
+    
+                    <li class="itemLista">
+                      <div class="carousel-item black-text">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Ordem Assintótica</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        À medida em que o argumento de uma função cresce ou diminui infinitamente, isto é,
+                                        fica muito grande ou muito pequeno, realizamos uma análise assintótica da função para
+                                        determinar sua complexidade por meio de uma representação generalista que segue três notações
+                                        principais: <b>O(f(x)) Ω(f(x)) Θ(f(x))</b>
+                                    </p>
+                                    <h4>Notações assintóticas</h4>
+                                    <ul>
+                                        <li>
+                                            <h5>O(f(n)) -> Notação Big O</h5>
+                                            <p class="black-text">
+                                                Essa notação define um limite superior assintótico para a função.
+                                                Nessa notação ignoramos as constantes.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h5>Ω(f(n)) -> Notação Omêga</h5>
+                                            <p class="black-text">
+                                                Essa notação define um limite inferior assintótico para a função.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h5>Θ(f(n)) -> Notação Teta</h5>
+                                            <p class="black-text">
+                                                Define um limite exato da função analisada.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Notação Big O</h2>
+                                <p class="black-text" style="margin-bottom: 0;">                
+                                    A notação Big O é uma forma de medir a complexidade de um algoritmo, ou seja, como seu tempo de execução cresce em relação ao tamanho da entrada. Ela é baseada na ideia de que, para grandes valores de n, o termo dominante da complexidade do algoritmo é o que cresce mais rápido.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <h4>Exemplo</h4>
+                                    <p class="black-text">
+                                        Podemos calcular o Big O procurando o termo dominante que cresce mais rápido à medida que o valor de 'n' aumenta.
+                                        Na função f(n) = 3n + 2n²:
+                                    <p>
+                                    <p class="black-text">
+                                        1. O termo dominante é 2n², já que, à medida que 'n' cresce, 
+                                        o termo quadrático se torna significativamente maior do que o termo linear.
+                                    </p>
+                                    <p class="black-text">
+                                        2. O fator constante (o coeficiente '2' neste caso) não afeta o crescimento assintótico 
+                                        à medida que 'n' se torna muito grande, então nos concentramos no termo n².
+                                    </p>
+                                    <p class="black-text">
+                                        Portanto, o Big O de f(n) é O(n²). Isso significa que a função f(n) cresce assintoticamente 
+                                        no máximo na ordem de n^2 à medida que 'n' se aproxima do infinito. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Notação Omêga</h2>
+                                <p class="black-text">                
+                                    A notação Omêga, também conhecida como notação Ω, é uma forma de descrever a complexidade assintótica inferior de um algoritmo. 
+                                    Ela é usada para indicar que o tempo de execução de um algoritmo cresce, no mínimo, na ordem de uma determinada função, 
+                                    para entradas suficientemente grandes.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <h4>Exemplo</h4>
+                                    <p class="black-text">
+                                        Para calcular o Ômega da função f(n) = 3n + 2n + 3, precisamos encontrar uma função que seja um limite inferior assintótico para f(n).
+                                    <p>
+                                    <p class="black-text">
+                                        Primeiro, simplificamos a função f(n):<br>
+                                        f(n) = 3n + 2n + 3<br>
+                                        f(n) = 5n + 3<br>
+                                    <p>
+                                    <p class="black-text">
+                                        Agora, queremos encontrar uma função g(n) tal que f(n) ≥ c . g(n) para algum c > 0 e n ≥ n0, onde c e n0 são constantes.
+                                    </p>
+                                    <p class="black-text">
+                                        Vamos escolher g(n) = n, e vamos encontrar um c adequado.<br>
+                                        f(n) = 5n + 3<br>
+                                        5n + 3 ≥ c . n<br>
+                                    </p>
+                                    <p class="black-text">
+                                        Para simplificar, podemos escolher c = 4 e n0 = 1:<br>
+                                        5n + 3 ≥ 4n para n ≥ 1
+                                    </p>
+                                    <p class="black-text">
+                                        Portanto, para c = 4 e n0 = 1, temos f(n) ≥ 4n para n ≥ 1.
+                                    </p>
+                                    <p class="black-text">
+                                        Isso significa que f(n) é limitado inferiormente por g(n) = n multiplicado por uma constante c = 4 para n ≥ 1.
+                                    </p>
+                                    <p class="black-text">
+                                        Portanto, podemos concluir que f(n) = Ω(n).
+                                    </p>
+                                </div>
+                            </div>
+                    </li>
+
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Notação Teta</h2>
+                                <p class="black-text">                
+                                    Em ciência da computação, a notação teta (Θ) é um tipo de notação assintótica que descreve a complexidade de execução de um algoritmo. 
+                                    Ela é usada para representar um limite superior e inferior exato para o tempo de execução de um algoritmo, para todos os valores suficientemente grandes de n.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <h4>Exemplo</h4>
+                                    <p class="black-text">
+                                        Vamos calcular o Teta da função f(n) = 7n + 2n + 4.
+                                    <p>
+                                    <p class="black-text">
+                                        Primeiro vamos simplificar:<br>
+                                        f(n) = 9n + 4
+                                    <p>
+                                    <p class="black-text">
+                                        Ao analisar essa função, o termo dominante que determina seu crescimento é 9n, já que, à medida que n aumenta, esse termo se torna muito maior em comparação com o termo constante 4.
+                                    <p>
+                                    <p class="black-text">
+                                        Portanto, a função f(n) cresce de forma linear, e seu comportamento assintótico é representado por Θ(n).
+                                    <p>
+                                    <p class="black-text">
+                                        Em resumo, Θ da função f(n) = 7n + 2n + 4 é Θ(n).
+                                    <p>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="setas direita" onclick="direita();">
+                  <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
+            </div>
+        </section> 
+        <footer class="page-footer">
+            <div class="page-footer-participantes">
+                <h5 class="white-text">Participantes</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright">
+                <p>
+                    © 2023 Copyright
+                </p>
+                </span>
+              </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    
+    function removeHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        let overlay = document.querySelector(".sidenav-overlay");
+
+        cabecalho.classList.remove("headerFixa");
+        conteudo.classList.remove("conteudoComFooter");
+
+        overlay.addEventListener("click", InsereHeaderFixa);
+    };
+
+    function InsereHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        cabecalho.classList.toggle("headerFixa");
+        conteudo.classList.toggle("conteudoComFooter");
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

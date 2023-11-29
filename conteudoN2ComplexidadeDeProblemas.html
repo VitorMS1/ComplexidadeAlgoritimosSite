@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header class="headerFixa">
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" onclick="removeHeaderFixa();" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div id="conteudoComFooter-id" class="conteudoComFooter">
+        
+        <section class="conteudo containerDeSlides">
+            <div class="setas esquerda" onclick="esquerda();">
+                <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+            </div>
+            <div class="containerConteudo">
+                <ul class="listaDeItens" style="list-style: none;">
+    
+                    <li class="itemLista">
+                      <div class="carousel-item black-text">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>O que é a Complexidade de Problemas?</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        A complexidade de problemas aborda a dificuldade computacional em resolver categorias 
+                                        específicas de problemas. Avaliamos o tempo e recursos necessários para encontrar soluções 
+                                        eficientes.
+                                    </p>
+                                    <h5>Definições Importantes:</h5>
+                                    <p>               
+                                        Problemas de complexidade é a dificuldade de um algoritmo Problemas de complexidade são classificadas 
+                                        em P, NP e NP-completos<br>             
+                                        <strong>Tempo polinomial:</strong> refere-se ao desempenho de um algoritmo em relação ao tamanho da entrada. 
+                                        Um algoritmo é considerado de tempo polinomial se o tempo de execução for limitado por um polinômio do tamanho da entrada.<br>
+                                        <strong>-> P (Polinomial):</strong> Eficientemente resolvido em tempo polinomial.<br>
+                                        <strong>-> NP (Não-Determinístico Polinomial):</strong> Soluções verificáveis em tempo polinomial, mas resolvê-los pode ser difícil.<br>
+                                        <strong>-> NP-Completo:</strong> Os mais difíceis em NP; se resolvido eficientemente, todos os NP podem ser resolvidos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Explicando</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        <strong>Problemas P</strong> (Polinomial) são aqueles para os quais existe um algoritmo eficiente capaz de resolver o problema em tempo polinomial
+                                        em relação ao tamanho da entrada. Em termos simples, o tempo de execução do algoritmo é limitado por uma função polinomial.
+                                    </p>                    
+                                    <p class="black-text"> 
+                                        <strong>Problemas NP</strong> (Não-Determinístico Polinomial) são aqueles para os quais, se uma solução candidata é fornecida,
+                                        é possível verificar em tempo polinomial se ela é correta. No entanto, encontrar essa solução inicial pode não ser eficiente.
+                                    </p>                    
+                                    <p class="black-text"> 
+                                        <strong>Problemas NP-Completo</strong> são uma classe especial de problemas NP. Se um problema NP-Completo tiver uma solução eficiente (tempo polinomial),
+                                        então todos os problemas em NP também têm soluções eficientes. Em outras palavras, os problemas NP-Completo são, de certa forma, os mais difíceis dentro da classe NP.
+                                        Se um problema NP-Completo puder ser resolvido em tempo polinomial, então todos os problemas NP podem. O exemplo clássico de um problema NP-Completo é o problema do caixeiro-viajante.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/complexidadeProblemas_img01.svg" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo classe P</h2>
+                                <p class="black-text">
+                                    Um exemplo clássico de problema P é a ordenação de uma lista de elementos. Algoritmos 
+                                    eficientes, como o <strong>Quicksort</strong> podem ordenar uma lista em tempo polinomial.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    
+                                    <p class="black-text">
+                                        A principal ideia por trás do Quicksort é a estratégia de dividir para conquistar, 
+                                        que é implementada da seguinte forma:
+                                    </p>
+                                    <ul id="ul-passos-dividirConquistar">
+                                        <li><strong>1</strong>- Escolha do Pivô: Seleciona-se um elemento da lista a ser ordenada, chamado de pivô. 
+                                        A escolha do pivô pode afetar o desempenho do algoritmo, mas uma abordagem comum é escolher o elemento do meio da lista</li>
+                                        <li><strong>2</strong>- Partição: Reorganiza a lista de modo que todos os elementos menores que o pivô fiquem à esquerda, 
+                                        e os elementos maiores fiquem à direita. Isso é feito em tempo linear.</li>
+                                        <li><strong>3</strong>- Recursão: Aplica-se o Quicksort recursivamente às sub-listas à esquerda e à direita do pivô.</li>
+                                    </ul>
+                                    <p class="black-text">
+                                        A complexidade de tempo do Quicksort é <strong>O(n * log(n))</strong> em média, onde <strong>n</strong> 
+                                        é o número de elementos a serem ordenados.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/complexidadeProblemas_img02.svg" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo classe NP</h2>
+                                <p class="black-text">
+                                    Um exemplo de problema NP é a <strong>fatoração de números</strong>. Nesse problema, dado um número 
+                                    grande deve-se encontrar seus fatores primos, pode ser complexo, mas verificar se uma dada fatoração é 
+                                    correta é fácil e pode ser feito em tempo polinomial.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        Os fatores primos são números primos que multiplicados entre si resultam no número original. Esse conceito é 
+                                        fundamental na teoria dos números e é utilizado em várias áreas da matemática e ciências aplicadas.
+                                    <p class="black-text">
+                                        O processo de fatoração envolve encontrar todos os divisores primos de um número e expressá-lo como o 
+                                        produto desses fatores. Por exemplo, a fatoração do número 24 é: 2 x 2 x 2 x 3, onde 2 e 3 são fatores primos.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/complexidadeProblemas_img03.jpeg" width="" height="20%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo classe NP-completo</h2>
+                                <p class="black-text">
+                                    O problema do Caixeiro-Viajante é um exemplo clássico de NP-completo.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        Nesse problema, dada uma lista de cidades <strong>n</strong> e as distâncias entre elas, 
+                                        deve-se encontrar o caminho mais curto que visita cada uma das cidades uma vez e retorne à cidade de origem, 
+                                        ou seja, uma permutação dos números de 1 a <strong>n</strong> que minimize a soma das distâncias entre as cidades 
+                                        consecutivas na permutação.Não se conhece um algoritmo eficiente para resolvê-lo, e o desafio é encontrar uma solução 
+                                        em tempo polinomial para a dinâmica.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/complexidadeProblemas_img04.webp" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="setas direita" onclick="direita();">
+                  <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="page-footer-participantes">
+                <h5 class="white-text">Participantes</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright">
+                <p>
+                    © 2023 Copyright
+                </p>
+                </span>
+              </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    
+    function removeHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        let overlay = document.querySelector(".sidenav-overlay");
+
+        cabecalho.classList.remove("headerFixa");
+        conteudo.classList.remove("conteudoComFooter");
+
+        overlay.addEventListener("click", InsereHeaderFixa);
+    };
+
+    function InsereHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        cabecalho.classList.toggle("headerFixa");
+        conteudo.classList.toggle("conteudoComFooter");
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

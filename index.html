@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header class="headerFixa">
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" onclick="removeHeaderFixa();" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div id="conteudoComFooter-id" class="conteudoComFooter">
+        <section class="container conteudo">
+            <h3>Bem-vindo ao conteúdo de Complexidade de Algoritmos!</h3>
+            <div>
+                <p>
+                    Nesta jornada desafiadora, mergulharemos no fascinante mundo da análise de algoritmos, 
+                    explorando a complexidade e eficiência que permeiam o âmbito computacional. 
+                    Prepare-se para uma exploração profunda, que o levará das noções básicas à compreensão avançada da otimização algorítmica.
+                </p>
+                <h5>O Que Esperar</h5>
+                <ol class="left-align">
+                    <li>
+                        <strong>Entender os Fundamentos:</strong> Vamos começar do início, abordando os conceitos fundamentais da complexidade algorítmica. 
+                        Aprenderemos sobre notações, tempo de execução, espaço e como medir a eficiência de algoritmos.
+                    </li>
+                    <li>
+                        <strong>Análise de Algoritmos:</strong> Aprofundaremos a análise de algoritmos, 
+                        explorando diferentes técnicas para avaliar o desempenho dos algoritmos, como a complexidade de tempo e espaço.
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="page-footer-participantes">
+                <h5 class="white-text">Participantes</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright">
+                <p>
+                    © 2023 Copyright
+                </p>
+                </span>
+              </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    
+    function removeHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        let overlay = document.querySelector(".sidenav-overlay");
+
+        cabecalho.classList.remove("headerFixa");
+        conteudo.classList.remove("conteudoComFooter");
+
+        overlay.addEventListener("click", InsereHeaderFixa);
+    };
+
+    function InsereHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        cabecalho.classList.toggle("headerFixa");
+        conteudo.classList.toggle("conteudoComFooter");
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

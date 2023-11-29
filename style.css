@@ -1,0 +1,207 @@
+
+/* Classes gerais */
+strong
+{
+    font-weight: 700;
+}
+
+h5
+{
+    margin: 3vh 0 0 0;
+}
+
+header
+{
+    width: 100%;
+    opacity: 1;
+}
+
+.headerFixa
+{
+    position: fixed;
+}
+
+/* Estrutura geral */
+.conteudoComFooter
+{
+    padding-top: 7vh;
+}
+
+.conteudo 
+{
+    min-height: 70vh;
+    padding-bottom: 5vh;
+}
+
+.containerDeSlides
+{
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+
+/* Setas */
+.setas 
+{
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    opacity: 0.1;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.setas:hover {
+    opacity: 1;
+}
+
+/* Conteúdo */
+.containerConteudo 
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+.div-paginas-conteudo
+{
+    display: flex;
+    align-items: center;
+}
+
+.div-paginas-conteudo-texto
+{
+    width: 50rem; 
+}
+
+.black-text
+{
+    font-size: 1.2rem;
+}
+
+.div-paginas-conteudo-img
+{
+    width: 30%;
+    height: 30%;
+    margin-left: 5rem;
+}
+           
+.page-footer 
+{
+    width: 100%;
+    height: 25vh;
+    bottom: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.page-footer-participantes
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 75%;
+    padding: 2hv 2vh;
+    background-color: #ee6e73;
+}
+
+.page-footer-copyright
+{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    background-color: #df696e;
+    justify-content: center;
+}
+
+.page-footer-copyright-texto
+{
+    justify-content: center;
+}
+
+
+/* N2 */
+#ul-passos-dividirConquistar
+{
+    display: grid; 
+    align-items: center;
+}
+            
+/* Carrossel / animação */
+.esconde 
+{
+    display: none;
+}
+
+.esquerda, .direita {
+    position: fixed;
+}
+
+.esquerda {
+    left: 0;
+}
+
+.direita {
+    right: 0;
+}
+
+.adicionaAnimacao 
+{
+    animation: moveToRight 2s ease-in-out;
+    animation-delay: 1000ms;
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(180px);
+    }
+}
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-180px);
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px){
+    .containerConteudo, .div-paginas, .div-paginas-conteudo
+    {
+        display: block;
+    }
+    
+    .conteudo
+    {
+        padding-bottom: 2rem;
+    }
+
+    .containerConteudo
+    {
+        padding: 0 3.5rem;
+    }
+
+    .div-paginas
+    {
+        max-width: 74vw;
+    }
+
+    .div-paginas-conteudo, .div-paginas-conteudo-texto, 
+    .div-paginas-conteudo-img
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+}

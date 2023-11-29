@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header class="headerFixa">
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" onclick="removeHeaderFixa();" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div id="conteudoComFooter-id" class="conteudoComFooter">
+        <section class="conteudo containerDeSlides">
+            <div class="setas esquerda" onclick="esquerda();">
+                <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+            </div>
+            <div class="containerConteudo">
+                <ul class="listaDeItens" style="list-style: none;">
+    
+                    <li class="itemLista">
+                      <div class="carousel-item black-text">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>O que é o Algoritimo Guloso?</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        O algoritimo guloso, do inglês "Greedy algorithm" (algoritmo ganancioso), se trata de uma estratégia de
+                                        implementação para algoritimos que visa oferecer uma solução simples para problemas de otimização. Sua 
+                                        execução propõe uma resposta fácil, onde dentre as alternativas oferecidas, o algoritimo irá selecionar 
+                                        a opção que julgar mais vantajosa no momento da escolha, isso sem considerar para o que a alternativa 
+                                        possa levar no longo prazo, por conta dessa caracteristica esse modelo é muitas vezes também chamado de
+                                        miope.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Explicando o modelo</h2>
+                                <p class="black-text" style="margin-bottom: 0;">                
+                                    Aprofundando um pouco mais na execução desse algoritimo, será possível encontrar uma série de 
+                                    caracteristicas que ditam o seu funcionamento.<br>
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                           Para dar inicio, como mencionado anteriormente, na sua execução essa técnica irá focar em encontrar 
+                                           o que pareça se tratar de um solução ótima para o problema, ao menos no momento da busca. Para isso,
+                                           são feitas comparações entre as opções possíveis, com base em um parâmetro que é passado para o
+                                           algoritimo anteriormente. Neste processo de seleção, são ignorados os resultados futuros que cada 
+                                           alterntiva possa acarretar, em razão disto, muitas vezes resultando em escolhas que nem ao menos gerem 
+                                           uma solução para o problema proposto. Porém, jamais volta atrás em uma escolha feita.
+                                    </p>
+                                    <p class="black-text">
+                                            O algoritimo guloso é simples e possui uma fácil implementação, porém nem sempre gera a melhor solução
+                                            possível, dependendo da quantidade de informações disponíveis para ser capaz de produzir uma boa resposta.
+                                    </p>
+                                    <p class="black-text">
+                                           Para exemplificar essa dinâmica, supodondo um algoritimo deva obter a maior soma com base nos números dispostos,
+                                           assim como é ilustrado na imagem, o algoritimo guloso irá selecionar o maior número de cada iteração, porém esse 
+                                           procedimento não o levará para a melhor solução possível. 
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/algoritimoGuloso_img01.gif" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo</h2>
+                                <p class="black-text">                
+                                    Para trazer uma demonstração prática da técnica, temos o <strong>Algoritmo de Dijkstra</strong>, 
+                                    um algoritmo de caminho mínimo usado em grafos. Este algoritimo visa calcular o caminho mais curto 
+                                    entre um vértice inicial e um ou todos os outros vértices de um grafo, isso seguindo por arestas com 
+                                    pesos definidos.
+                                </p>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">       
+                                        Para realizar esse cálculo, a cada iteração o algoritimo irá tentar fazer o menor movimento
+                                        com as possibilidades oferecidas no momento, sem voltar atrás em uma decisão que já tenha feito.
+                                        Confiando que resulte na melhor solução possível.
+                                    </p>
+                                    <p class="black-text">       
+                                        Dessa forma, seguindo o grafo representado na imagem, supondo uma partida do vértice <strong>A</strong> 
+                                        com destino ao vértice <strong>E</strong>. Inicialmente o algoritimo irá julgar o caminho para o vértice 
+                                        <strong>B</strong> o mais vantajoso, por levar apenas 2 minutos para se locomover, então se movimentando 
+                                        para lá. Em seguida, se baseando no mesmo cirtério, o algoritimo escolherá o vértice <strong>D</strong> 
+                                        como o próximo destino. E entao, por fim seguirá para o vértice <strong>E</strong>, atingindo seu objetivo. 
+                                    </p>
+                                    <p class="black-text">       
+                                        Resultando na rota <strong>A -> B -> D -> E</strong> com um custo de 5 minutos. Neste caso, obtendo êxcito em 
+                                        encontrar a menor rota possível.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    <img src="assets/img/algoritimoGuloso_img02.png" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="setas direita" onclick="direita();">
+                  <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="page-footer-participantes">
+                <h5 class="white-text">Participantes</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright">
+                <p>
+                    © 2023 Copyright
+                </p>
+                </span>
+              </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    
+    function removeHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        let overlay = document.querySelector(".sidenav-overlay");
+
+        cabecalho.classList.remove("headerFixa");
+        conteudo.classList.remove("conteudoComFooter");
+
+        overlay.addEventListener("click", InsereHeaderFixa);
+    };
+
+    function InsereHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        cabecalho.classList.toggle("headerFixa");
+        conteudo.classList.toggle("conteudoComFooter");
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

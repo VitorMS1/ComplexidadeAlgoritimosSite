@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header class="headerFixa">
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li onclick="InsereHeaderFixa()">
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" onclick="removeHeaderFixa();" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <div id="conteudoComFooter-id" class="conteudoComFooter">
+
+        <section class="conteudo containerDeSlides">
+            <div class="setas esquerda" onclick="esquerda();">
+                <img src="assets/img/seta-esquerda.png" width="50" height="50" alt="">
+            </div>
+            <div class="containerConteudo">
+                <ul class="listaDeItens" style="list-style: none;">
+    
+                    <li class="itemLista">
+                      <div class="carousel-item black-text">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>O que é a Complexidade Pessimista?</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">                
+                                        A complexidade pessimista é um conceito crucial na análise de algoritmos, fornecendo insights 
+                                        sobre o desempenho máximo esperado. Entendendo as condições mais desfavoráveis, podemos 
+                                        garantir eficiência em situações desafiadoras.
+                                    </p>
+
+                                    <p class="black-text">                
+                                        Muitas vezes chamada de "pior caso", a complexidade pessimista avalia o desempenho máximo de 
+                                        um algoritmo em termos de tempo ou espaço. É essencial para garantir que, mesmo sob condições 
+                                        adversas, o algoritmo permaneça eficiente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Explicando</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">                
+                                        Ao projetar algoritmos, consideramos diferentes cenários. A complexidade pessimista concentra-se nas 
+                                        condições mais demoradas ou que exigem mais recursos. Essa análise crítica ajuda a evitar gargalos em 
+                                        situações desafiadoras. Ao entender a complexidade pessimista, os desenvolvedores podem tomar decisões 
+                                        informadas sobre a escolha e otimização de algoritmos, garantindo eficiência mesmo em circunstâncias 
+                                        desfavoráveis.
+                                    </p>
+                                    <p class="black-text">                
+                                        Um exemplo prático é a ordenação em pior caso de um algoritmo de classificação, como o Quicksort. 
+                                        Se entendermos como o algoritmo se comporta em situações desordenadas extremas, podemos otimizá-lo para 
+                                        garantir eficiência mesmo nessas condições adversas.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo da análise de função pessimista (1/2)</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        <pre>
+                                            1- def bubble_sort(arr):
+                                            2-    n = len(arr)
+                                            3-    for i in range(n):
+                                            4-        for j in range(0, n-i-1):
+                                            5-            if arr[j] > arr[j+1]:
+                                            6-                # Troca os elementos se estiverem fora de ordem
+                                            7-                arr[j], arr[j+1] = arr[j+1], arr[j]
+                                         </pre>
+                                    </p>
+                                    <p class="black-text">                
+                                                Linha 1 - Definição do método: Complexidade O(1) -> Operação única, não depende do tamanho do array.
+                                                <br>                
+                                                Linha 2 - Inicialização: Complexidade O(1) -> Operação única, não depende do tamanho do array.
+                                                <br>                
+                                                Linha 3 - Primeiro loop: Complexidade O(n) -> Executa <i>n</i> vezes, onde <i>n</i> é o tamanho do array.
+                                                <br>                
+                                                Linha 4 - Segundo loop: Complexidade O(n) -> Varia de <i>0</i> a <i>n - i - 1</i> em cada iteração.
+                                                <br>                
+                                                Linha 5 - Condicional: Complexidade O(1) -> Execução é constante, não depende do tamanho da entrada.
+                                                <br>                
+                                                Linha 7 - Troca de elementos: Complexidade O(1) -> Operação constante.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="esconde">
+                        <div class="div-paginas">
+                            <div class="div-paginas-titulo">
+                                <h2>Exemplo da análise de função pessimista (2/2)</h2>
+                            </div>
+                            <div class="div-paginas-conteudo">
+                                <div class="div-paginas-conteudo-texto">
+                                    <p class="black-text">
+                                        <pre>
+                                            1- def bubble_sort(arr):
+                                            2-    n = len(arr)
+                                            3-    for i in range(n):
+                                            4-        for j in range(0, n-i-1):
+                                            5-            if arr[j] > arr[j+1]:
+                                            6-                # Troca os elementos se estiverem fora de ordem
+                                            7-                arr[j], arr[j+1] = arr[j+1], arr[j]
+                                        </pre>
+                                    </p>
+                                    <p class="black-text">                 
+                                        A função de complexidade pessimista no final fica: <i>T(n)</i> = <i>O(1)</i> + <i>O(n)</i> * ( <i>O(n)</i> * ( <i>O(1)</i> + <i>O(1)</i> ) )
+                                        <br>
+                                        No qual é simplificada para: <i>T(n)</i> = <i>O(1)</i> + <i>O(n²)</i>
+                                        <br>
+                                        Portanto, a complexidade pessimista do algoritmo Bubble Sort é quadrática, <i>O(n²)</i>, no pior caso. Isso ocorre quando o array está inversamente ordenado, exigindo trocas em cada comparação.
+                                    </p>
+                                </div>
+                                <div class="div-paginas-conteudo-img">
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="setas direita" onclick="direita();">
+                  <img src="assets/img/seta-direita.png" width="50" height="50" alt="">
+              </div>
+        </section>
+        <footer class="page-footer">
+            <div class="page-footer-participantes">
+                <h5 class="white-text">Participantes</h5>
+                <ul>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-footer-copyright">
+                <p>
+                    © 2023 Copyright
+                </p>
+                </span>
+              </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script text="text/javascript" src="slide.js"></script>
+<script>
+    
+    function removeHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        let overlay = document.querySelector(".sidenav-overlay");
+
+        cabecalho.classList.remove("headerFixa");
+        conteudo.classList.remove("conteudoComFooter");
+
+        overlay.addEventListener("click", InsereHeaderFixa);
+    };
+
+    function InsereHeaderFixa()
+    {
+        let cabecalho = document.querySelector("header");
+        let conteudo = document.querySelector("#conteudoComFooter-id");
+        cabecalho.classList.toggle("headerFixa");
+        conteudo.classList.toggle("conteudoComFooter");
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    
+    var instance = M.Carousel.init({
+        fullWidth: true,
+        indicators: true
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>

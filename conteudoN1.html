@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Complexidade de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <a class="sidenav-close" href="index.html">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="conteudoN1.html">
+                        Conteúdo N1
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="conteudoN2.html">
+                        Conteúdo N2
+                    </a>
+                </li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </nav>
+    </header>
+    <section class="conteudo">
+        <h4 class="center-align">Conteúdo N1</h4>
+        <div class="row">
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/img/analise-assintotica-img.jpg" width="100" height="100">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Ordem Assintótica<i class="material-icons right">more_vert</i></span>
+                        <p><a href="conteudoN1OrdemAssintotica.html">Continuar lendo</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Ordem Assintótica<i class="material-icons right">close</i></span>
+                        <p>
+                            Em ciência da computação, ordem assíntotica é uma maneira de comparar o crescimento de duas ou mais funções matemáticas. 
+                            Ela é baseada na ideia de que, para valores suficientemente grandes de n, a diferença entre as funções é insignificante.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="./assets/img/complexidade-pessimista-img.jpg" width="100" height="100">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Complexidade Pessimista<i class="material-icons right">more_vert</i></span>
+                        <p><a href="conteudoN1ComplexidadePessimista.html">Continuar lendo</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Complexidade Pessimista<i class="material-icons right">close</i></span>
+                        <p>A complexidade pessimista, comumente expressa como "pior caso" em algoritmos, representa o desempenho
+                        máximo esperado em termos de tempo ou espaço. Ela foca nas situações mais desafiadoras, onde o algoritmo 
+                        leva mais tempo ou utiliza mais recursos. É crucial para garantir que, mesmo nas condições mais adversas,
+                        o algoritmo permaneça eficiente. Compreender a complexidade pessimista ajuda a tomar decisões informadas
+                        sobre a escolha e otimização de algoritmos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer">
+        <div class="page-footer-participantes">
+            <h5 class="white-text">Participantes</h5>
+            <ul>
+                <li>
+                    <a class="grey-text text-lighten-3" href="#!">Marco Aurélio</a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="#!">Vitor Marques</a>
+                </li>
+                <li>
+                    <a class="grey-text text-lighten-3" href="#!">Daniel Fontaneli</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer-copyright">
+            <p>
+                © 2023 Copyright
+            </p>
+            </span>
+          </div>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {});
+    });
+    var instance = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+  });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+
+    var collapsibleElem = document.querySelector('.collapsible');
+    var collapsibleInstance = M.Collapsible.init(collapsibleElem, {});
+</script>
+</html>
